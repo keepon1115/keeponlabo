@@ -931,6 +931,90 @@ strong {
 /* ---------- VISION ---------- */
 /* Vision uses zigzag layout - no additional styles needed */
 
+/* ---------- CURRICULUM CARD GRID ---------- */
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.curriculum-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.curriculum-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.curriculum-card__img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.curriculum-card__body {
+  padding: 20px 20px 24px;
+}
+
+.curriculum-card__title {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.curriculum-card__text {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+}
+
+/* ---------- CLAFT RULE ---------- */
+.claft-rule__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.claft-rule__img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.claft-rule__img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.claft-rule__text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.claft-rule__text p {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.claft-rule__text strong {
+  color: var(--yellow);
+  -webkit-text-fill-color: var(--yellow);
+}
+
 /* ---------- FOOTER ---------- */
 .footer {
   background: var(--gray-900);
@@ -1222,6 +1306,22 @@ strong {
 
   /* Vision */
 
+  /* Curriculum Grid */
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Claft Rule */
+  .claft-rule__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .claft-rule__text p {
+    font-size: 1.3rem;
+  }
+
   /* CTA Banner */
   .cta-banner {
     padding: 48px 0;
@@ -1289,8 +1389,8 @@ strong {
     font-size: 1.3rem;
   }
 
-  .stat-card__value {
-    font-size: 2.4rem;
+  .curriculum-grid {
+    grid-template-columns: 1fr;
   }
 }
 
