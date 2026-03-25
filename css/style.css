@@ -1015,6 +1015,24 @@ strong {
   -webkit-text-fill-color: var(--yellow);
 }
 
+.claft-rule__subtitle {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em;
+  color: var(--yellow) !important;
+  -webkit-text-fill-color: var(--yellow) !important;
+  text-transform: none;
+  opacity: 0.9;
+}
+
+.claft-rule__body {
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  line-height: 1.9 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+
 /* ---------- FOOTER ---------- */
 .footer {
   background: var(--gray-900);
@@ -1321,6 +1339,7 @@ strong {
   .claft-rule__text p {
     font-size: 1.3rem;
   }
+
 
   /* CTA Banner */
   .cta-banner {
