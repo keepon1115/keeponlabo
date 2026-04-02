@@ -38,6 +38,54 @@
     revealElements.forEach((el) => el.classList.add("is-visible"));
   }
 
+  /* ---------- Hero title — character-by-character "speaking" animation ---------- */
+  (function initHeroTitle() {
+    const titleEl   = document.querySelector(".hero__title");
+    const schoolEl  = document.querySelector(".hero__school");
+    const copyEl    = document.querySelector(".hero__copy");
+    const ctaEl     = document.querySelector(".hero__content .btn--cta");
+
+    // Hide supporting elements until after the title finishes
+    [schoolEl, copyEl, ctaEl].forEach(function (el) {
+      if (el) el.classList.add("hero__fade-hidden");
+    });
+
+    if (!titleEl) return;
+
+    const text = titleEl.textContent.trim();
+    titleEl.innerHTML = "";
+
+    // Build per-character spans with staggered animation-delay
+    var delayMs = 350; // initial pause (video starts loading)
+    [...text].forEach(function (char) {
+      var span = document.createElement("span");
+      span.textContent = char;
+      span.className = "hero__char";
+      span.style.animationDelay = delayMs + "ms";
+      titleEl.appendChild(span);
+
+      // Base cadence: 90ms per character
+      delayMs += 90;
+      // Longer pause at punctuation — feels like the speaker is pausing
+      if ("。、！？".includes(char)) delayMs += 220;
+    });
+
+    // After title finishes, reveal school label → copy → CTA in sequence
+    var afterMs = delayMs + 150;
+
+    function revealEl(el, extraMs) {
+      if (!el) return;
+      setTimeout(function () {
+        el.classList.remove("hero__fade-hidden");
+        el.style.transition = "opacity 0.75s ease, transform 0.75s ease";
+      }, afterMs + extraMs);
+    }
+
+    revealEl(schoolEl, 0);
+    revealEl(copyEl,   200);
+    revealEl(ctaEl,    450);
+  })();
+
   /* ---------- Counter animation for stat values ---------- */
   const statValues = document.querySelectorAll(".stat-card__value");
 
