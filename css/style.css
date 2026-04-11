@@ -999,6 +999,104 @@ strong {
   color: var(--gray-600);
 }
 
+/* ---------- CURRICULUM — コピー & CTA ---------- */
+.curriculum-copy {
+  margin-top: 72px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.curriculum-copy__hook {
+  font-family: "Shippori Mincho B1", "Noto Serif JP", "YuMincho", "Yu Mincho", serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--gray-900);
+  letter-spacing: 0.02em;
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.curriculum-copy__hook::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--yellow) 100%);
+}
+
+.curriculum-copy__lead {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--gray-900);
+  margin-bottom: 28px;
+}
+
+.curriculum-copy__body {
+  text-align: left;
+}
+
+.curriculum-copy__body p {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--gray-700);
+}
+
+.curriculum-copy__body p + p {
+  margin-top: 16px;
+}
+
+.curriculum-copy__emphasis {
+  margin-top: 28px;
+  margin-bottom: 0;
+  padding: 20px 22px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.85;
+  letter-spacing: 0.03em;
+  color: var(--gray-800);
+  background: rgba(227, 242, 253, 0.65);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(25, 118, 210, 0.2);
+}
+
+.curriculum-copy__closing {
+  margin-top: 28px;
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--gray-700);
+}
+
+.curriculum-copy__label {
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.curriculum-copy__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.curriculum-copy__cta .btn {
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+  white-space: normal;
+  text-align: center;
+}
+
 /* ---------- CLAFT RULE ---------- */
 .claft-rule__inner {
   display: grid;
@@ -1298,6 +1396,45 @@ strong {
     padding: 12px 20px;
     white-space: normal;
     text-align: center;
+  }
+
+  .curriculum-copy {
+    margin-top: 48px;
+  }
+
+  .curriculum-copy__hook {
+    font-size: 1.15rem;
+    padding-bottom: 14px;
+  }
+
+  .curriculum-copy__lead {
+    font-size: 1rem;
+    margin-bottom: 22px;
+  }
+
+  .curriculum-copy__body p {
+    font-size: 0.95rem;
+    line-height: 1.95;
+  }
+
+  .curriculum-copy__emphasis {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+    letter-spacing: 0.02em;
+  }
+
+  .curriculum-copy__closing {
+    font-size: 0.95rem;
+  }
+
+  .curriculum-copy__label {
+    margin-top: 32px;
+    font-size: 0.9rem;
+  }
+
+  .curriculum-copy__cta .btn {
+    font-size: 0.95rem;
+    padding: 14px 28px;
   }
 
   /* Events */
