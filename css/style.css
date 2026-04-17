@@ -316,6 +316,29 @@ strong {
   width: auto;
 }
 
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__nav-link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--gray-700);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.header__nav-link:hover,
+.header__nav-link--active {
+  color: var(--orange);
+  background: rgba(255, 107, 0, 0.07);
+}
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -1087,6 +1110,7 @@ strong {
 .curriculum-copy__cta {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .curriculum-copy__cta .btn {
@@ -1264,6 +1288,11 @@ strong {
 
 /* ---------- Responsive: Tablet ---------- */
 @media (max-width: 1024px) {
+  .header__nav-link {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
   .features__grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -1319,6 +1348,10 @@ strong {
   /* Header */
   .header__logo img {
     height: 34px;
+  }
+
+  .header__nav {
+    display: none;
   }
 
   .btn--sm {
@@ -1430,6 +1463,10 @@ strong {
   .curriculum-copy__label {
     margin-top: 32px;
     font-size: 0.9rem;
+  }
+
+  .curriculum-copy__cta {
+    margin-top: 32px;
   }
 
   .curriculum-copy__cta .btn {
@@ -1584,5 +1621,358 @@ strong {
 
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* ============================================
+   サブページ共通
+   ============================================ */
+
+/* ページヒーロー */
+.page-hero {
+  padding-top: var(--header-h);
+  background: linear-gradient(135deg, var(--blue-deeper) 0%, #1a3a6b 60%, var(--blue-dark) 100%);
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.page-hero__inner {
+  padding-top: 56px;
+}
+
+.page-hero__label {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 12px;
+}
+
+.page-hero__title {
+  font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+  background: var(--gray-100);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--gray-500);
+}
+
+.breadcrumb__list li + li::before {
+  content: "›";
+  color: var(--gray-300);
+}
+
+.breadcrumb__list a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.breadcrumb__list a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   アクセスページ
+   ============================================ */
+
+.access-section {
+  padding: 80px 0;
+}
+
+.access-section + .access-section {
+  padding-top: 0;
+}
+
+/* 地図 */
+.access-map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 16 / 7;
+}
+
+.access-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* 住所・アクセス情報カード */
+.access-info {
+  margin-top: 56px;
+}
+
+.access-info__address {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.access-info__address-name {
+  font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+}
+
+.access-info__address-text {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+
+.access-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.access-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  gap: 16px;
+}
+
+.access-card__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.access-card--walk .access-card__icon {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.access-card--parking .access-card__icon {
+  background: var(--yellow-light);
+  color: #E65100;
+}
+
+.access-card--bike .access-card__icon {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.access-card--landmark .access-card__icon {
+  background: var(--pink-light);
+  color: var(--pink);
+}
+
+
+.access-card__label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+
+.access-card__text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--gray-700);
+}
+
+/* 「目印」横並びカード */
+.access-cards--full {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 768px) {
+  .page-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .access-map {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-md);
+  }
+
+  .access-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .access-info__address-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* ============================================
+   スクール生・保護者様の声ページ
+   ============================================ */
+
+.voices-section {
+  padding: 80px 0;
+  background: var(--gray-50);
+}
+
+.voices-intro {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.voices-intro__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.voices-intro__text {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+
+/* 声グリッド */
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* 吹き出しカード */
+.voice-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-card::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--blue-light);
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  pointer-events: none;
+}
+
+.voice-card__text {
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: var(--gray-700);
+  flex: 1;
+  padding-top: 28px;
+}
+
+.voice-card__footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.voice-card__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.voice-card__avatar svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+
+.voice-card__role {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+
+.voice-card__num {
+  font-size: 0.72rem;
+  color: var(--gray-500);
+}
+
+/* カードの色バリエーション */
+.voice-card:nth-child(3n+1)::before { color: #DBEAFE; }
+.voice-card:nth-child(3n+2)::before { color: #FEF9C3; }
+.voice-card:nth-child(3n+3)::before { color: #DCFCE7; }
+
+.voice-card:nth-child(3n+1) .voice-card__avatar {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+}
+.voice-card:nth-child(3n+2) .voice-card__avatar {
+  background: linear-gradient(135deg, var(--orange) 0%, #bf360c 100%);
+}
+.voice-card:nth-child(3n+3) .voice-card__avatar {
+  background: linear-gradient(135deg, var(--green) 0%, #1b5e20 100%);
+}
+
+@media (max-width: 1024px) {
+  .voices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .voices-section {
+    padding: 56px 0;
+  }
+
+  .voices-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .voice-card {
+    padding: 24px 20px 20px;
   }
 }
