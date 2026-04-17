@@ -27,11 +27,45 @@
         <a href="voices.html" class="header__nav-link header__nav-link--active">保護者様の声</a>
         <a href="index.html#contact" class="header__nav-link">お問い合わせ</a>
       </nav>
-      <a href="https://forms.gle/Z9wpCNC2Vy6wp24CA" class="btn btn--cta btn--sm" target="_blank" rel="noopener">
+      <a href="https://forms.gle/Z9wpCNC2Vy6wp24CA" class="btn btn--cta btn--sm header__cta-pc" target="_blank" rel="noopener">
         無料体験に申し込む
       </a>
+      <button class="header__hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- ========== MOBILE NAV ========== -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav__overlay"></div>
+    <div class="mobile-nav__drawer">
+      <div class="mobile-nav__head">
+        <a href="index.html" class="mobile-nav__logo">
+          <img src="images/logo.png" alt="キープオン" loading="lazy">
+        </a>
+        <button class="mobile-nav__close" aria-label="メニューを閉じる">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav__links" aria-label="モバイルナビゲーション">
+        <a href="index.html#features" class="mobile-nav__link">特徴</a>
+        <a href="index.html#curriculum" class="mobile-nav__link">カリキュラム</a>
+        <a href="index.html#events" class="mobile-nav__link">イベント</a>
+        <a href="access.html" class="mobile-nav__link">アクセス</a>
+        <a href="voices.html" class="mobile-nav__link mobile-nav__link--active">保護者様の声</a>
+        <a href="index.html#contact" class="mobile-nav__link">お問い合わせ</a>
+      </nav>
+      <div class="mobile-nav__cta">
+        <a href="https://forms.gle/Z9wpCNC2Vy6wp24CA" class="btn btn--cta" target="_blank" rel="noopener">
+          無料体験に申し込む
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ========== PAGE HERO ========== -->
   <div class="page-hero">

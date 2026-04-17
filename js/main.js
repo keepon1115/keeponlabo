@@ -5,6 +5,38 @@
 (function () {
   "use strict";
 
+  /* ---------- Mobile nav (hamburger drawer) ---------- */
+  const hamburger   = document.querySelector(".header__hamburger");
+  const mobileNav   = document.querySelector(".mobile-nav");
+  const overlay     = document.querySelector(".mobile-nav__overlay");
+  const closeBtn    = document.querySelector(".mobile-nav__close");
+  const mobileLinks = document.querySelectorAll(".mobile-nav__link");
+
+  function openNav() {
+    if (!hamburger || !mobileNav) return;
+    hamburger.classList.add("is-open");
+    mobileNav.classList.add("is-open");
+    hamburger.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    if (!hamburger || !mobileNav) return;
+    hamburger.classList.remove("is-open");
+    mobileNav.classList.remove("is-open");
+    hamburger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.contains("is-open") ? closeNav() : openNav();
+    });
+  }
+  if (overlay) overlay.addEventListener("click", closeNav);
+  if (closeBtn) closeBtn.addEventListener("click", closeNav);
+  mobileLinks.forEach((link) => link.addEventListener("click", closeNav));
+
   /* ---------- Header shadow on scroll ---------- */
   const header = document.getElementById("header");
 
