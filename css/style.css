@@ -317,6 +317,13 @@ strong {
 }
 
 /* ハンバーガーボタン（デスクトップでは非表示） */
+.header__cta-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
 .header__hamburger {
   display: none;
   flex-direction: column;
@@ -468,6 +475,9 @@ strong {
 }
 
 .mobile-nav__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 16px 20px 32px;
   border-top: 1px solid var(--gray-200);
 }
@@ -1435,6 +1445,47 @@ strong {
   margin-top: 16px;
 }
 
+/* ---------- SNS Brand Colors ---------- */
+.footer__sns-link[aria-label="LINE"] {
+  background: #06C755;
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="LINE"]:hover {
+  background: #05b04c;
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="YouTube"] {
+  background: #FF0000;
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="YouTube"]:hover {
+  background: #cc0000;
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="Instagram"] {
+  background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="Instagram"]:hover {
+  filter: brightness(1.1);
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="note"] {
+  background: #41C9B4;
+  color: var(--white);
+}
+
+.footer__sns-link[aria-label="note"]:hover {
+  background: #37b39f;
+  color: var(--white);
+}
+
 /* ---------- Scroll Reveal ---------- */
 .reveal {
   opacity: 0;
@@ -2000,7 +2051,7 @@ strong {
 }
 
 /* ============================================
-   スクール生・保護者様の声ページ
+   スクールに通う方の声ページ
    ============================================ */
 
 .voices-section {
