@@ -1194,6 +1194,10 @@ strong {
   color: var(--gray-600);
 }
 
+.curriculum-card__cta {
+  margin-top: 16px;
+}
+
 /* ---------- CURRICULUM — コピー & CTA ---------- */
 .curriculum-copy {
   margin-top: 72px;
