@@ -1146,6 +1146,82 @@ strong {
   color: var(--gray-700);
 }
 
+/* ---------- CAMPAIGN ---------- */
+.campaign {
+  background: var(--yellow-light);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.section__label--orange {
+  color: var(--orange);
+  background: #FFE4D6;
+}
+
+.campaign__board {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 12px;
+}
+
+.campaign__card {
+  position: relative;
+  display: inline-block;
+  max-width: 560px;
+  width: 100%;
+  background: var(--white);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-xl);
+  transform: rotate(-2deg);
+  transition: transform var(--transition);
+}
+
+.campaign__board:hover .campaign__card {
+  transform: rotate(0deg);
+}
+
+.campaign__card img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.campaign__tape {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  width: 90px;
+  height: 32px;
+  background: rgba(244, 81, 30, 0.55);
+  border: 1px solid rgba(244, 81, 30, 0.3);
+  transform: rotate(-6deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.campaign__stamp {
+  position: absolute;
+  bottom: -18px;
+  right: -18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--orange);
+  font-family: var(--font-ja);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 3px dashed var(--orange);
+  transform: rotate(-8deg);
+  box-shadow: var(--shadow-md);
+}
+
+.campaign__cta {
+  margin-top: 44px;
+}
+
 /* ---------- VISION ---------- */
 /* Vision uses zigzag layout - no additional styles needed */
 
@@ -1560,6 +1636,30 @@ strong {
 
   .section__label {
     font-size: 0.72rem;
+  }
+
+  /* Campaign */
+  .campaign__card {
+    max-width: 320px;
+  }
+
+  .campaign__stamp {
+    width: 64px;
+    height: 64px;
+    font-size: 0.9rem;
+    bottom: -12px;
+    right: -8px;
+  }
+
+  .campaign__tape {
+    width: 70px;
+    height: 26px;
+    top: -12px;
+    left: 16px;
+  }
+
+  .campaign__cta {
+    margin-top: 32px;
   }
 
   /* Header */
