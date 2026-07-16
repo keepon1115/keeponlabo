@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -121,21 +121,48 @@
         <div class="campaign__board reveal">
           <div class="campaign__card">
             <span class="campaign__tape" aria-hidden="true"></span>
-            <img src="images/news.jpg" alt="お得なキャンペーンのお知らせ" loading="lazy">
+            <img src="images/news.png" alt="お得なキャンペーンのお知らせ" loading="lazy">
             <span class="campaign__stamp">お得</span>
           </div>
         </div>
         <div class="campaign__cta reveal">
-          <a href="https://claft.keeponlearning.fun/lab" class="btn btn--blue btn--lg" target="_blank" rel="noopener">
-            お知らせ・活動報告はこちら
+          <a href="summer-lab.html" class="btn btn--blue btn--lg">
+            サマプロラボって？
             <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- ========== FEATURES ========== -->
+    <section class="section section--alt features" id="features">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">特徴</span>
+          <h2 class="section__title">通いたい時に、学べる分だけ。</h2>
+        </div>
+        <div class="zigzag">
+          <div class="zigzag__item reveal">
+            <div class="zigzag__img zigzag__img--square">
+              <img src="images/feature.png" alt="通いたい時に、学べる分だけ。" loading="lazy">
+            </div>
+            <div class="zigzag__body">
+              <p><strong>【1コマ60分からの完全予約制】</strong><br>
+                他の習い事や家族旅行の予定、夏休みのスケジュールに合わせて、無理なく無駄なく通うことができます。</p>
+              <p><strong>【定員5名の少人数制】</strong><br>
+                1クラス最大5名までの超アットホームな少人数レッスン。元大工で優しい先生の目がしっかり届くので、わからないところもその場でスッキリ解決できます。</p>
+              <p><strong>【高価なロボットキットは「無料レンタル」！】</strong><br>
+                「高額な教材購入が必要なのでは…」という心配は一切不要！レッスンで使用するロボットキットはすべて無料でレンタルできるので、初期費用を抑えて手軽にスタートできます。</p>
+              <p><strong>【毎月の楽しいイベントには「無料で参加」OK！】</strong><br>
+                毎月開催される、学びをさらに深められる楽しいイベントには、なんと無料で参加可能！お友達やご家族と一緒に、遊びの延長線上で楽しく学べます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== VISION ========== -->
-    <section class="section section--alt vision" id="vision">
+    <section class="section vision" id="vision">
       <div class="container">
         <div class="section__header reveal">
           <span class="section__label">Vision</span>
@@ -152,28 +179,6 @@
               <p>今、本当に必要なのは、好きなことを深掘りし、自ら問いを立て、解決する力。<br>
                 小学校高学年から高校生という「自分」を創る大切な時期に、好きなことを「武器」に変える経験を。<br>
                 キープオンラボは、一人ひとりに合わせた「成長の実感」を一緒に育みます。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== FEATURES ========== -->
-    <section class="section features" id="features">
-      <div class="container">
-        <div class="section__header reveal">
-          <span class="section__label">特徴</span>
-          <h2 class="section__title">通いたい時に、学べる分だけ。</h2>
-        </div>
-        <div class="zigzag">
-          <div class="zigzag__item reveal">
-            <div class="zigzag__img">
-              <img src="images/feature.jpg" alt="通いたい時に、学べる分だけ。" loading="lazy">
-            </div>
-            <div class="zigzag__body">
-              <p>決まった曜日・時間に、与えられた課題を解くのではなく、<br>
-                自分の学びたいタイミングで予約して、学びたいことを選択できる！<br>
-                1コマ定員5名！いつでも入会OK！</p>
             </div>
           </div>
         </div>
@@ -311,6 +316,14 @@
         <div class="section__header reveal">
           <span class="section__label">イベント</span>
           <h2 class="section__title">豊富なアイデアを試す機会と<br class="sp-only">異年齢との交流！</h2>
+        </div>
+        <div class="events__latest reveal">
+          <a href="https://claft.keeponlearning.fun/news" class="btn btn--yellow btn--lg events__latest-btn" target="_blank" rel="noopener">
+            <span class="events__latest-tag">NEW</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 10v4a1 1 0 0 0 1 1h3l5 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a3 3 0 0 1 0 6"/><path d="M18.5 6.5a7 7 0 0 1 0 11"/></svg>
+            最新イベント情報
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
         <div class="events__grid">
           <a href="https://www.keeponlearning.fun/event" class="event-card reveal" data-delay="0" target="_blank" rel="noopener">
